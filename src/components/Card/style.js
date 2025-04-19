@@ -36,11 +36,27 @@ export const Content = styled.div.attrs({ className: "card_content" })`
 
 export const Name = styled.h2.attrs({ className: "card_title" })`
   font-size: 20px;
+  font-weight: 700;
   color: #005cff;
   margin-bottom: 8px;
 `;
 
 export const Description = styled.div.attrs({ className: "card_description" })`
   font-size: 14px;
-  color: #333;
+  font-weight: 300;
+  color: #000;
+`;
+
+export const ProfileLink = styled.a.attrs({ className: "card_link" })`
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  font-weight: 300;
+  color: #005cff;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
 `;

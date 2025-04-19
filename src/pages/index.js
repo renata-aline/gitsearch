@@ -13,7 +13,7 @@ const Home = () => {
 
   const [error, setError] = useState(false);
 
-  useEffect(() => {
+  const handleSearch = async () => {
     if (search) {
       getUserGithub(search)
         .then((data) => {
@@ -32,6 +32,10 @@ const Home = () => {
       setError(false);
       setListResult([]);
     }
+  };
+
+  useEffect(() => {
+    handleSearch();
   }, [search]);
 
   return (
@@ -47,6 +51,7 @@ const Home = () => {
           avatar={item.avatar_url}
           title={item.name}
           description={item.bio}
+          ProfileLink={item.html_url}
         />
       ))}
 

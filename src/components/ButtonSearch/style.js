@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const SearchButton = styled.button.attrs({ className: "search-button" })`
   background-color: #005cff;
   box-sizing: border-box;
-  border: 1 px solid #dddddd;
+  border: 1px solid #dddddd;
   width: 62px;
   height: 62px;
 
