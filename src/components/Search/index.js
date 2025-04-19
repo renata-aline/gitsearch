@@ -9,9 +9,19 @@ const Search = ({ result, placeholder }) => {
     result(inputRef.current.value);
   };
 
+  const handleKeyPress = (event) => {
+    if (event.key === "Enter") {
+      handleClick();
+    }
+  };
+
   return (
     <S.Search>
-      <Input ref={inputRef} placeholder={placeholder} />
+      <Input
+        ref={inputRef}
+        placeholder={placeholder}
+        handleKeyPress={handleKeyPress}
+      />
       <ButtonSearch handleClick={handleClick} />
     </S.Search>
   );
