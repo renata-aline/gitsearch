@@ -26,7 +26,11 @@ const Home = () => {
         })
         .catch((error) => {
           setError(true);
+          setListResult([]);
         });
+    } else {
+      setError(false);
+      setListResult([]);
     }
   }, [search]);
 
