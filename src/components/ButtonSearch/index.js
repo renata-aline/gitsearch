@@ -3,13 +3,11 @@ import { FaSearch } from "react-icons/fa";
 
 import * as S from "./style";
 
-const ButtonSearch = () => {
+const ButtonSearch = ({ handleClick = () => {} }) => {
   return (
-    <div>
-      <S.SearchButton>
-        <FaSearch size={58} color="#fff" />
-      </S.SearchButton>
-    </div>
+    <S.SearchButton type="button" onClick={handleClick}>
+      <FaSearch size={58} color="#fff" />
+    </S.SearchButton>
   );
 };
 
