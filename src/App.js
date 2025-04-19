@@ -1,11 +1,14 @@
 import GlobalStyle from "./config/GlobalStyles";
+import Theme from "./config/Theme";
 import Home from "./pages";
 
 function App() {
   return (
     <div className="App">
-      <Home />
-      <GlobalStyle />
+      <Theme>
+        <Home />
+        <GlobalStyle />
+      </Theme>
     </div>
   );
 }

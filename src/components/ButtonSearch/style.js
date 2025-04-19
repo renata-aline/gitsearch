@@ -1,15 +1,15 @@
 import styled from "styled-components";
 
 export const SearchButton = styled.button.attrs({ className: "search-button" })`
-  background-color: #005cff;
+  background-color: ${({ theme }) => theme.colors.palette.thirdy[500]};
   box-sizing: border-box;
-  border: 1px solid #dddddd;
+  border: 1px solid ${({ theme }) => theme.colors.palette.fourthy[300]};
   width: 62px;
   height: 62px;
 
   border-radius: 10px;
   padding: 17px;
-  color: white;
+  color: ${({ theme }) => theme.colors.palette.secondary[100]};
   cursor: pointer;
 
   display: flex;
@@ -17,7 +17,7 @@ export const SearchButton = styled.button.attrs({ className: "search-button" })`
   justify-content: center;
 
   &:hover {
-    background-color: #00bfff;
+    background-color: ${({ theme }) => theme.colors.palette.thirdy[400]};
   }
 
   svg {

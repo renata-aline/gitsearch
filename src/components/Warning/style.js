@@ -7,10 +7,10 @@ export const Warning = styled.div.attrs({ className: "warning" })`
   max-width: 800px;
   padding: 18px;
   border-radius: 10px;
-  background-color: #fff;
+  background-color: ${({ theme }) => theme.colors.palette.secondary[100]};
   text-align: center;
 `;
 
 export const Text = styled.p.attrs({ className: "warning_text" })`
-  color: #ff0000;
+  color: ${({ theme }) => theme.colors.palette.fifth[400]};
 `;

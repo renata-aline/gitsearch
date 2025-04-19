@@ -9,14 +9,14 @@ export const Header = styled.div`
 `;
 
 export const Title = styled.h1`
-  font-size: 30px;
-  color: #fff;
+  ${({ theme }) => theme.typography.h3}
+  color: ${(props) => props.theme.colors.palette.secondary[100]};
   font-weight: 300;
   display: flex;
   gap: 8px;
 
   @media (min-width: 768px) {
-    font-size: 60px;
+    ${({ theme }) => theme.typography.h1}
   }
 
   span {

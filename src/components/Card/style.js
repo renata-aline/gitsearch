@@ -13,7 +13,7 @@ export const Card = styled.div.attrs({ className: "card" })`
   max-width: 800px;
   padding: 18px 48px 18px 24px;
   border-radius: 25px;
-  background-color: #fff;
+  background-color: ${(props) => props.theme.colors.palette.secondary[100]};
   text-align: center;
 
   .avatar {
@@ -35,25 +35,22 @@ export const Content = styled.div.attrs({ className: "card_content" })`
 `;
 
 export const Name = styled.h2.attrs({ className: "card_title" })`
-  font-size: 20px;
-  font-weight: 700;
-  color: #005cff;
+  ${(props) => props.theme.typography.h2};
+  color: ${(props) => props.theme.colors.palette.thirdy[500]};
   margin-bottom: 8px;
 `;
 
 export const Description = styled.div.attrs({ className: "card_description" })`
-  font-size: 14px;
-  font-weight: 300;
-  color: #000;
+  ${(props) => props.theme.typography.body2};
+  color: ${(props) => props.theme.colors.palette.primary[900]};
 `;
 
 export const ProfileLink = styled.a.attrs({ className: "card_link" })`
+  ${(props) => props.theme.typography.body2};
   display: flex;
   align-items: center;
   gap: 8px;
-  font-size: 14px;
-  font-weight: 300;
-  color: #005cff;
+  color: ${(props) => props.theme.colors.palette.thirdy[500]};
   text-decoration: none;
 
   &:hover {
